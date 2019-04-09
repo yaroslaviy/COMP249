@@ -1,8 +1,13 @@
+//-----------------------------------------------------
+//Assignment 4
+//Part: II
+//Written by: Yaroslav Bilodid ID40068605
+//-----------------------------------------------------
 package question2;
 
 import java.util.NoSuchElementException;
 
-// TODO: Auto-generated Javadoc
+//
 /**
  * The Class CellList.
  */
@@ -115,6 +120,7 @@ public class CellList {
 	 * @param original the original list
 	 */
 	public CellList(CellList original) {
+
 
 
 		if (original.head == null)
@@ -277,6 +283,7 @@ public class CellList {
 	 * @param i the index
 	 */
 	public void replaceAtIndex(CellPhone obj, int i) {
+
 		try {
 			if (i < 0 || i > this.size - 1) {
 				throw new NoSuchElementException();
@@ -308,6 +315,7 @@ public class CellList {
 	 */
 	public CellNode find(long sNum) {
 
+
 		CellNode pointer = head;
 		for (int i = 0; i < this.size - 1; i++) {
 			if (pointer.cell.getSerialNum() == sNum) {
@@ -316,6 +324,7 @@ public class CellList {
 			}
 			pointer = pointer.next;
 		}
+		System.out.println(sNum + " wasn't found after " + this.size + " iterations. It's not in the list.");
 		return null;
 	}
 
